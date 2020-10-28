@@ -8,7 +8,7 @@ module.exports = {
         destination: (req, file, cb) => {
             cb(null, path.resolve(__dirname, '..', '..', 'tmp', 'uploads'));
         },
-        filename: () => {
+        filename: (req, file, cb) => {
             crypto.randomBytes(16, (err, hash) => {
                 if (err) cb(err);
 
@@ -23,13 +23,14 @@ module.exports = {
     },
     fileFilter: (req, file, cb) => {
         const allowedMimes = [
-            'image/jpeg',
-            'image/pjpeg',
-            'image/png',
-            'image/gif'
+            "image/jpeg",
+            "image/jpg",
+            "image/pjpeg",
+            "image/png",
+            "image/gif"
         ];
 
-        if (allowedMimes.includes(file.mimeType)) {
+        if (allowedMimes.includes(file.mimetype)) {
             cb(null, true);
         } else {
             cb(new Error("Invalid file type."))
