@@ -1,0 +1,21 @@
+{
+    "name": "api",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./src/index.js",
+        "dev": "nodemon ./src/index.js"
+    },
+    "repository": "https://github.com/joaobispo2077/uploadfy-api.git",
+    "author": "João Bispo <vitor.vi10@hotmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mongoose": "^5.10.12",
+        "multer-azure-storage": "^0.2.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}
