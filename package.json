@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "start": "node ./src/index.js",
-        "dev": "nodemon ./src/index.js"
+        "start": "node ./src/app.js",
+        "dev": "nodemon ./src/app.js"
     },
     "repository": "https://github.com/joaobispo2077/uploadfy-api.git",
     "author": "João Bispo <vitor.vi10@hotmail.com>",
