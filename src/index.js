@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 
@@ -17,6 +18,7 @@ mongoose.connect(process.env.MONGODB_CONNECTION_STRING, {
   .catch((err) => console.log('error to connect to uploadfy database', err));
 
 
+app.use(cors());
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
